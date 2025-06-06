@@ -9,6 +9,7 @@ public class JavaCalculator
         System.out.println("Welcome to the Java Calculator!");
 
 
+
         while (true) {
             System.out.println("Enter an operation (+, -, *, /, or exit): ");
             userChoice = scan.nextLine();
@@ -24,13 +25,19 @@ public class JavaCalculator
             }
 
 
-        
+            final double RANGE_MIN = -1000;
+            final double RANGE_MAX = 1000;
+            
             double num1, num2;
 
             while (true) {
                 System.out.print("Enter the first number: ");
                 if (scan.hasNextDouble()) {
                     num1 = scan.nextDouble();
+                    if (num1 < RANGE_MIN || num1 > RANGE_MAX) {
+                        System.out.println("Number out of range. Please enter a number between " + RANGE_MIN + " and " + RANGE_MAX + ".");
+                        continue;
+                    }
                     break;
                 } else {
                     System.out.println("Invalid input. Please enter a valid number.");
@@ -42,8 +49,13 @@ public class JavaCalculator
                 System.out.print("Enter the second number: ");
                 if (scan.hasNextDouble()) {
                     num2 = scan.nextDouble();
+                    if (num2 < RANGE_MIN || num2 > RANGE_MAX) {
+                        System.out.println("Number out of range. Please enter a number between " + RANGE_MIN + " and " + RANGE_MAX + ".");
+                        continue;
+                    }
                     break;
-                } else {
+                } 
+                else {
                     System.out.println("Invalid input. Please enter a valid number.");
                     scan.next(); 
                 }
@@ -99,6 +111,6 @@ public class JavaCalculator
             
         }
         scan.close();
-
+               
     }
 }
