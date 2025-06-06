@@ -1,3 +1,6 @@
+/*
+ * This is the class I am using to calculate the budget as described in the project instructions in the README.md file.
+ */
 public class BudgetCalculator 
 {
     public static void main(String[] args)
@@ -12,13 +15,13 @@ public class BudgetCalculator
 
         // Declared Variables + Calculations
 
-        double monthlySalary = SALARY;
-        double savedAmount = monthlySalary * SAVINGS_PERCENT;
-        double rentAmount = monthlySalary * RENT_PERCENT;
-        double groceriesAmount = monthlySalary * GROCERIES_PERCENT;
-        double entertainmentAmount = monthlySalary * ENTERTAINMENT_PERCENT;
-        double totalExpenses = rentAmount + groceriesAmount + entertainmentAmount;
-        double remainingBalance = monthlySalary - totalExpenses;
+        double monthlySalary = SALARY; // to store monthly salary
+        double savedAmount = monthlySalary * SAVINGS_PERCENT; // to store the savedAmount calculation
+        double rentAmount = monthlySalary * RENT_PERCENT; // to store the rentAmount calculation
+        double groceriesAmount = monthlySalary * GROCERIES_PERCENT; // to store the groceriesAmount calculation
+        double entertainmentAmount = monthlySalary * ENTERTAINMENT_PERCENT; // to store the amount of entertainment spent calculation
+        double totalExpenses = rentAmount + groceriesAmount + entertainmentAmount; // to store the total expenses by adding the amount of money spent on rent, groceries, and entertainment.
+        double remainingBalance = monthlySalary - totalExpenses; // to store the remaining balance after expenses
 
         // Displayed Results of Calculations
 
