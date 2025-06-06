@@ -14,9 +14,10 @@ public class JavaCalculator
             userChoice = scan.nextLine();
             
             if (userChoice.equalsIgnoreCase("exit")) {
-                System.out.println("Goodbye!");
+                System.out.println("Thank you for using the Java Calculator! Goodbye!");
                 break;
             }
+
         
             double num1, num2;
 
@@ -68,10 +69,6 @@ public class JavaCalculator
                         System.out.println("Error: Division by zero is not allowed.");
                     }
                     break;
-
-                case "exit":
-                    System.out.println("Goodbye!");
-                    break;
                 
                 default:
                     System.out.println("Invalid option.");
@@ -85,18 +82,23 @@ public class JavaCalculator
             while (true) {
                 yesNo = scan.nextLine().trim();
                 if (yesNo.equalsIgnoreCase("no")) {
-                    System.out.println("Goodbye!");
                     break;
                 } else if (yesNo.equalsIgnoreCase("yes")) {
-                    break; // continue the main loop
+                    break;
                 } else {
                     System.out.println("Please enter 'yes' or 'no': ");
                 }
+            }
+            if (yesNo.equalsIgnoreCase("no")) {
+                System.out.println("Thank you for using the Java Calculator! Goodbye!");
+                break;
             }
 
             
         }
 
+
         scan.close();
+
     }
 }
