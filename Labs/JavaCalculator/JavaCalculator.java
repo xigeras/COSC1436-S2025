@@ -18,6 +18,12 @@ public class JavaCalculator
                 break;
             }
 
+            if (!userChoice.equals("+") && !userChoice.equals("-") && !userChoice.equals("*") && !userChoice.equals("/")) {
+                System.out.println("Invalid input. Please try again.");
+                continue;
+            }
+
+
         
             double num1, num2;
 
@@ -69,10 +75,6 @@ public class JavaCalculator
                         System.out.println("Error: Division by zero is not allowed.");
                     }
                     break;
-                
-                default:
-                    System.out.println("Invalid option.");
-                    break; 
             } 
 
             
