@@ -19,43 +19,47 @@ public class JavaCalculator
             }
         
             double num1, num2;
+
+            while (true) {
+                System.out.print("Enter the first number: ");
+                if (scan.hasNextDouble()) {
+                    num1 = scan.nextDouble();
+                    break;
+                } else {
+                    System.out.println("Invalid input. Please enter a valid number.");
+                    scan.next(); 
+                }
+            }
+
+            while (true) {
+                System.out.print("Enter the second number: ");
+                if (scan.hasNextDouble()) {
+                    num2 = scan.nextDouble();
+                    break;
+                } else {
+                    System.out.println("Invalid input. Please enter a valid number.");
+                    scan.next(); 
+                }
+            }
+ 
+            scan.nextLine();
         
             switch (userChoice) {
                 case "+":
-                    System.out.println("Enter the first number: ");
-                    num1 = scan.nextDouble();
-                    System.out.println("Enter the second number: ");
-                    num2 = scan.nextDouble();
-
-
                     System.out.println("The result of " + num1 + " + " + num2 + " = " + (num1 + num2));
                     break;
 
                 case "-":
-                    System.out.println("Enter the first number: ");
-                    num1 = scan.nextDouble();
-                    System.out.println("Enter the second number: ");
-                    num2 = scan.nextDouble();
-
                     System.out.println("The result of " + num1 + " - " + num2+ " = " + (num1 - num2));
                     break;
 
                 case "*":
-                    System.out.println("Enter the first number: ");
-                    num1 = scan.nextDouble();
-                    System.out.println("Enter the second number: ");
-                    num2 = scan.nextDouble();
-
                     System.out.println("The result of " + num1 + " * " + num2 + " = " + (num1 * num2));
                     break;
 
                 case "/":
-                    System.out.println("Enter the first number: ");
-                    num1 = scan.nextDouble();
-                    System.out.println("Enter the second number: ");
-                    num2 = scan.nextDouble();
 
-                    if (num1 != 0 || num2 != 0)
+                    if (num2 != 0)
                     {
                         System.out.println("The result of " + num1 + " / " + num2 + " = " + (num1 / num2));
                     }
@@ -75,15 +79,21 @@ public class JavaCalculator
             } 
 
             
-            
-            scan.nextLine();
 
             System.out.println("Would you like to perform another operation (yes/no)? ");
-            String yesNo = scan.nextLine();
-            if (yesNo.equalsIgnoreCase("no")) {
-                System.out.println("Goodbye!");
-                break;
+            String yesNo;
+            while (true) {
+                yesNo = scan.nextLine().trim();
+                if (yesNo.equalsIgnoreCase("no")) {
+                    System.out.println("Goodbye!");
+                    break;
+                } else if (yesNo.equalsIgnoreCase("yes")) {
+                    break; // continue the main loop
+                } else {
+                    System.out.println("Please enter 'yes' or 'no': ");
+                }
             }
+
             
         }
 
