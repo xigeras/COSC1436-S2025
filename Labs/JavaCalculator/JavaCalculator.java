@@ -5,63 +5,88 @@ public class JavaCalculator
     public static void main(String[] args)
     {
         Scanner scan = new Scanner(System.in);
-        
+        String userChoice;
         System.out.println("Welcome to the Java Calculator!");
-        System.out.println("Enter an operation (+, -, *, /, or exit): ");
-        String userChoice = scan.nextLine();
-
-        while(userChoice != "exit")
-        {
-        switch (userChoice) {
-            case "+":
-                System.out.println("Enter the first number: ");
-                double num1 = scan.nextDouble();
-                System.out.println("Enter the second number: ");
-                double num2 = scan.nextDouble();
 
 
-                System.out.println("The result of " + num1 + " + " + num2 + " = " + (num1 + num2));
-                break;
-            case "-":
-                System.out.println("Enter the first number: ");
-                double num3 = scan.nextDouble();
-                System.out.println("Enter the second number: ");
-                double num4 = scan.nextDouble();
-
-                System.out.println("The result of " + num3 + " - " + num4 + " = " + (num3 - num4));
-                break;
-            case "*":
-                System.out.println("Enter the first number: ");
-                double num5 = scan.nextDouble();
-                System.out.println("Enter the second number: ");
-                double num6 = scan.nextDouble();
-
-                System.out.println("The result of " + num5 + " * " + num6 + " = " + (num5 * num6));
-                break;
-            case "/":
-                System.out.println("Enter the first number: ");
-                double num7 = scan.nextDouble();
-                System.out.println("Enter the second number: ");
-                double num8 = scan.nextDouble();
-
-                if (num7 != 0 || num8 != 0)
-                {
-                    System.out.println("The result of " + num7 + " / " + num8 + " = " + (num7 / num8));
-                }
-                else
-                {
-                    System.out.println("Error: Division by zero is not allowed.");
-                }
-
-            case "exit":
+        while (true) {
+            System.out.println("Enter an operation (+, -, *, /, or exit): ");
+            userChoice = scan.nextLine();
+            
+            if (userChoice.equalsIgnoreCase("exit")) {
                 System.out.println("Goodbye!");
                 break;
-            
-            default:
-                System.out.println("Invalid option.");
-                break; 
+            }
+        
+            double num1, num2;
+        
+            switch (userChoice) {
+                case "+":
+                    System.out.println("Enter the first number: ");
+                    num1 = scan.nextDouble();
+                    System.out.println("Enter the second number: ");
+                    num2 = scan.nextDouble();
+
+
+                    System.out.println("The result of " + num1 + " + " + num2 + " = " + (num1 + num2));
+                    break;
+
+                case "-":
+                    System.out.println("Enter the first number: ");
+                    num1 = scan.nextDouble();
+                    System.out.println("Enter the second number: ");
+                    num2 = scan.nextDouble();
+
+                    System.out.println("The result of " + num1 + " - " + num2+ " = " + (num1 - num2));
+                    break;
+
+                case "*":
+                    System.out.println("Enter the first number: ");
+                    num1 = scan.nextDouble();
+                    System.out.println("Enter the second number: ");
+                    num2 = scan.nextDouble();
+
+                    System.out.println("The result of " + num1 + " * " + num2 + " = " + (num1 * num2));
+                    break;
+
+                case "/":
+                    System.out.println("Enter the first number: ");
+                    num1 = scan.nextDouble();
+                    System.out.println("Enter the second number: ");
+                    num2 = scan.nextDouble();
+
+                    if (num1 != 0 || num2 != 0)
+                    {
+                        System.out.println("The result of " + num1 + " / " + num2 + " = " + (num1 / num2));
+                    }
+                    else
+                    {
+                        System.out.println("Error: Division by zero is not allowed.");
+                    }
+                    break;
+
+                case "exit":
+                    System.out.println("Goodbye!");
+                    break;
+                
+                default:
+                    System.out.println("Invalid option.");
+                    break; 
             } 
+
+            
+            
+            scan.nextLine();
+
+            System.out.println("Would you like to perform another operation (yes/no)? ");
+            String yesNo = scan.nextLine();
+            if (yesNo.equalsIgnoreCase("no")) {
+                System.out.println("Goodbye!");
+                break;
+            }
+            
         }
+
         scan.close();
     }
 }
