@@ -11,7 +11,19 @@ public class StringLab
         System.out.println("The lowercase version of stringLab is: '" + stringLab.toLowerCase() + "'"); // converted the string to lowercase
         System.out.println("The index of the first occurence of 'Java' is: " + stringLab.indexOf("Java")); // index of the first occurrence of "Java"
         System.out.println("Does the string contain 'Lab'? " + stringLab.contains("Lab"));
+        System.out.println("Let's replace 'Java' with 'Java Programming'! Here it is! \n" + stringLab.replace("Java", "Java Programming")); // replaced "Java" with "Java Programming"
         
+        String[] spaces = stringLab.split(" "); // split stringLab by spaces
+        for (String space : spaces) {
+            System.out.println(space);
+        }
+
+        System.out.println("Here is the result of trimming any leading or trailing spaces: '" + stringLab.trim() + "'"); // trimmed the string to remove leading and trailing spaces
+    
+        String str1 = "java string lab!";
+        System.out.println("Here are the results of comparing '" + str1 + "' with '" + stringLab + "':");
+        System.out.println("Using equals(): " + str1.equals(stringLab)); // compares the 2 strings for equality
+        System.out.println("Using equalsIgnoreCase(): " + str1.equalsIgnoreCase(stringLab)); // compares the 2 strings for equality and ignores case diffs
     }
     public char charAt(int index) {
         return stringLab.charAt(index); // returns character at the specified index
