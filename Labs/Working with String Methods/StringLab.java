@@ -24,11 +24,23 @@ public class StringLab
         System.out.println("Here are the results of comparing '" + str1 + "' with '" + stringLab + "':");
         System.out.println("Using equals(): " + str1.equals(stringLab)); // compares the 2 strings for equality
         System.out.println("Using equalsIgnoreCase(): " + str1.equalsIgnoreCase(stringLab)); // compares the 2 strings for equality and ignores case diffs
+    
+        // Task 2
+        // For Loop: Count Vowels from stringLab
+        int vowelCount = 0;
+        for (int i = 0; i < stringLab.length(); i++) {
+            char c = stringLab.charAt(i);
+            if ("AEIOUaeiou".indexOf(c) != -1) { // checks if the character is a vowel
+                System.out.println(vowelCount++ + "... There's a vowel here: " + c);
+                System.out.println("There are " + vowelCount + " vowel(s) in the stringLab variable!");
+            }
+        }
     }
     public char charAt(int index) {
         return stringLab.charAt(index); // returns character at the specified index
     }
         
+    
 
     
 }
