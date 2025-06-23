@@ -10,7 +10,7 @@ public class SuperheroRoster {
             new Superhero("Black Widow", "Stealth and combat", 80),
             new Superhero("Thor", "God of Thunder", 95),
             new Superhero("Captain America", "Super soldier", 88),
-        }
+        };
  
         // 2. Print each hero's details using a loop
         for (Superhero hero : heroes) {
@@ -35,24 +35,24 @@ public class SuperheroRoster {
         for (Superhero hero : heroes) {
             if (hero.getName().equalsIgnoreCase(target)) {
                 System.out.println("Hero Found:");
-                hero.displayHero
+                hero.displayHero();
                 found = true;
                 break;
             }
-            if (!found) {
-                System.out.println("Hero named '" + target + "' not found in the roster.");
-            }
+        }
+        if (!found) {
+            System.out.println("Hero named '" + target + "' not found in the roster.");
         }
     }
  
     // Method: calculateAveragePower
-    public static double calculateAveragePower(int[] powerLevels) {
+    public static double calculateAveragePower(Superhero[] heroes) {
         // Implement the calculation for average power level
         int sum = 0;
-        for (int power : powerLevels) {
-            sum += power;
+        for (Superhero hero : heroes) {
+            sum += hero.getPowerLevel();
         }
         // Return the calculated average
-        return (double) sum / powerLevels.length; // Placeholder return value
+        return (double) sum / heroes.length; 
     }
 }
