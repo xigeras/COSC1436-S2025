@@ -17,7 +17,7 @@ public class SuperheroRoster {
          }
  
         // 3. Call the searchHero method to find a specific hero by name
-        searchHero(heroNames, abilities, powerLevels, "Iron Man");
+        searchHero(heroNames, abilities, powerLevels, " ");
 
         // 4. Calculate and display the average power level by calling calculateAveragePower method
  
@@ -47,10 +47,7 @@ public class SuperheroRoster {
     // Method: calculateAveragePower
     public static double calculateAveragePower(int[] powerLevels) {
         // Implement the calculation for average power level
-        int sum = 0;
-        for (int power : powerLevels) {
-            sum += power;
-        }
+        
         // Return the calculated average
         return 0; // Placeholder return value
     }
