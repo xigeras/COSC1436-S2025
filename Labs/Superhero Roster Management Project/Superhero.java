@@ -16,4 +16,10 @@ public class Superhero {
         System.out.println("Ability: " + ability);
         System.out.println("Power Level: " + powerLevel);
     }
+    public String getName() {
+        return name;
+    }
+    public int getPowerLevel() {
+        return powerLevel;
+    }
 }
