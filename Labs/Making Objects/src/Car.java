@@ -7,7 +7,7 @@ public class Car extends Vehicle {
     }
 
     @Override
-    start() {
+    public void start() {
         System.out.println("The car is starting! Be aware of what's in front of you while driving.");
         super.start();
     }
