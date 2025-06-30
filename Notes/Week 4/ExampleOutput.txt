@@ -1,0 +1,6 @@
+| Name    | Grade | Level     |
+|---------|-------|-----------|
+| Alice   | 90    | FRESHMAN  |
+| Bob     | 85    | SOPHOMORE | 
+| Charlie | 78    | JUNIOR    |
+| Diane   | 92    | SENIOR    |
