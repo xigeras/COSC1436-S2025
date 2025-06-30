@@ -6,7 +6,7 @@ public class Hero {
     public Hero(String name, int powerLevel, Affiliation affiliation) 
     {
         this.name = name;
-        this.level = powerLevel;
+        this.powerLevel = powerLevel;
         this.affiliation = affiliation;
     }
 
@@ -17,7 +17,7 @@ public class Hero {
 
     public int getLevel()
     {
-        return level;
+        return powerLevel;
     }
 
     public Affiliation getAffiliation()
@@ -27,6 +27,6 @@ public class Hero {
 
     public String toString()
     {
-        return "Name: " + name + "\nPower Level: " + level + "\nAffiliation: " + affiliation;
+        return "Name: " + name + "\nPower Level: " + powerLevel + "\nAffiliation: " + affiliation;
     }
 }

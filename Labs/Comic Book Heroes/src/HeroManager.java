@@ -19,7 +19,7 @@ public class HeroManager {
     public void bubbleSortByPowerLevel() {
         for (int i = 0; i < heroes.size() - 1; i++) {
             for (int j = 0; j < heroes.size() - i - 1; j++) {
-                if(heroes.get(j).getLevel() > students.get(j + 1).getLevel() {
+                if(heroes.get(j).getLevel() > heroes.get(j + 1).getLevel()) {
                     Hero temp = heroes.get(j);
                     heroes.set(j, heroes.get(j + 1));
                     heroes.set(j + 1, temp);
@@ -49,7 +49,7 @@ public class HeroManager {
         for (int i = 0; i < heroes.size(); i++) {
             heroArray[i][0] = heroes.get(i).getName();
             heroArray[i][1] = String.valueOf(heroes.get(i).getLevel());
-            heroArray[i][2] = students.get(i).getAffiliation().toString();
+            heroArray[i][2] = heroes.get(i).getAffiliation().toString();
         }
         System.out.println(Arrays.deepToString(heroArray));
     }
