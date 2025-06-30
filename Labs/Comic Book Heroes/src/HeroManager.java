@@ -28,7 +28,18 @@ public class HeroManager {
         }
     }
 
-    
+    public void insertionSortByPowerLevel() {
+        for(int i = 1; i < heroes.size(); i++) {
+            Hero key = heroes.get(i);
+            int j = i - 1;
+
+            while(j >= 0 && heroes.get(j).getLevel() > key.getLevel()) {
+                heroes.set(j + 1, heroes.get(j));
+                j--;
+            }
+            heroes.set(j + 1, key);
+        }
+    }
 
     // 2D array Display
 
