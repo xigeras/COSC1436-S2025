@@ -43,4 +43,21 @@ public class HeroManager {
 
     // 2D array Display
 
+    public void displayHeroes2DArray() {
+        String [][] heroArray = new String[heroes.size()][3];
+
+        for (int i = 0; i < heroes.size(); i++) {
+            heroArray[i][0] = heroes.get(i).getName();
+            heroArray[i][1] = String.valueOf(heroes.get(i).getLevel());
+            heroArray[i][2] = students.get(i).getAffiliation().toString();
+        }
+        System.out.println(Arrays.deepToString(heroArray));
+    }
+
+    public void displayHeroes() {
+        for (int i = 0; i < heroes.size(); i++) {
+            System.out.println(heroes.get(i));
+        }
+    }
+
 }
